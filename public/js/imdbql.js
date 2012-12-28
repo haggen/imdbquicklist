@@ -26,7 +26,14 @@ $(function() {
       var self, url, callback, directory;
 
       self = this;
-      query = query.toLowerCase().substr(0, 4);
+      query = query.toLowerCase();
+
+      // Gracefully remove stopwords form the beginning of the query
+      if(query.match(/^(the|as?|of) (.+)/)) {
+        query = query.replace(/^(the|as?|of) (.+)/, '$2');
+      }
+
+      query = query.substr(0, 4);
       directory = query.substr(0, 1);
       url = ['http://sg.media-imdb.com/suggests/', directory, '/', query, '.json'];
       callback = 'imdb$' + query;

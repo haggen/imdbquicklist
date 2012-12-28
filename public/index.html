@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>IMDb quicklist</title>
+
+  <meta name="description" content="IMDb quicklist">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="css/imdbql.css" rel="stylesheet">
+
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.js" media="all"></script>
+  <script src="js/html5shiv-printshiv.js" media="print"></script>
+  <![endif]-->
+</head>
+<body>
+  <header>
+    <div class="container-fluid">
+      <h1>IMDb quicklist</h1>
+      <p>Fetch the movies you're willing to watch, compare them, take an overview of rating, actors, story and cover, compare them, decide what to watch and go grab your popcorn.</p>
+
+      <input type="text" class="span4" placeholder="Movie title" autofocus="true">
+    </div>
+  </header>
+
+  <div class="container-fluid">
+    <table class="table table-striped table-hover table-condensed">
+      <thead>
+        <tr>
+          <th class="span3">Movie</th>
+          <th class="span2">Genre</th>
+          <th>Plot</th>
+          <th class="span4">Actors</th>
+          <th class="span2">Rating</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+
+    <footer class="footer">
+      <small>Made in Brazil, with love, by <a href="http://corenzan.com">Corenzan</a>. Thanks to <a href="http://www.omdbapi.com">The Open Movie Database</a>.</small>
+    </footer>
+  </div>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/imdbql.js"></script>
+</body>
+</html>

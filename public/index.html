@@ -17,9 +17,6 @@
   <script src="js/html5shiv.js" media="all"></script>
   <script src="js/html5shiv-printshiv.js" media="print"></script>
   <![endif]-->
-
-  <script>var _gaq = [['_setAccount', 'UA-37314129-1'], ['_trackPageview']];</script>
-  <script src="http://www.google-analytics.com/ga.js" async="true"></script>
 </head>
 <body>
   <header>
@@ -54,5 +51,19 @@
   <script src="js/jquery.js"></script>
   <script src="js/bootstrap.js"></script>
   <script src="js/imdbql.js"></script>
+
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37314129-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  </script>
 </body>
 </html>

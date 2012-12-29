@@ -23,9 +23,9 @@ $(function() {
   $('input').typeahead({
 
     source: function(query, process) {
-      var self, url, callback, directory;
+      var that, url, callback, directory;
 
-      self = this;
+      that = this;
       query = query.toLowerCase();
 
       // Gracefully remove stopwords form the beginning of the query
@@ -39,20 +39,20 @@ $(function() {
       url = ['http://sg.media-imdb.com/suggests/', directory, '/', query, '.json'];
       callback = 'imdb$' + query;
 
-      // console.log(self, query, directory, url, callback);
+      // console.log(that, query, directory, url, callback);
 
       window[callback] = function(response) {
         var suggestions = [];
 
         // Reference table for title <-> ID
-        self.reference = {};
+        that.reference = {};
 
         $.each(response.d, function(index, item) {
           var title;
 
           if('y' in item) {
             title = item.l + ' (' + item.y + ')';
-            self.reference[title] = item.id;
+            that.reference[title] = item.id;
             suggestions.push(title);
           }
         });

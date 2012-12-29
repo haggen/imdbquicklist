@@ -33,12 +33,13 @@ $(function() {
         query = query.replace(/^(the|as?|of) (.+)/, '$2');
       }
 
+      query = query.split(' ').shift();
       query = query.substr(0, 4);
       directory = query.substr(0, 1);
       url = ['http://sg.media-imdb.com/suggests/', directory, '/', query, '.json'];
       callback = 'imdb$' + query;
 
-      console.log(self, query, directory, url, callback);
+      // console.log(self, query, directory, url, callback);
 
       window[callback] = function(response) {
         var suggestions = [];

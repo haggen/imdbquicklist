@@ -9,17 +9,39 @@ body, label, input, button, select, textarea {
   font-family: Open\ Sans, sans-serif;
 }
 
-header {
-  background: #000;
-  color: #fff;
-  padding: 1em 0;
+body {
   margin-bottom: 1em;
 }
 
+header {
+  background: -webkit-linear-gradient(bottom, #eee, #fff);
+  box-shadow: 0 0 1em #ccc, 0 0 .3em #aaa;
+  padding: 1em 0;
+  margin: 0 0 1.6em;
+}
+
+/* The negative side margin below is for responsiveness (bootstrap adds padding to body on small screens) */
+@media (max-width: 767px) {
+  header {
+    padding: 1em 20px;
+    margin: 0 -20px 1.6em;
+  }
+
+  tr th:nth-child(3), tr th:nth-child(4),
+  tr td:nth-child(3), tr td:nth-child(4) {
+    display: none;
+  }
+}
+
+/* The mad selector below is because of conflict with typeahead style */
+header > div > h1, header > div > p {
+  text-shadow: 0 1px #fff;
+}
+
 header input[type="text"] {
-  border: 0;
+  box-shadow: 0 1px #fff
 }
 
 header input[type="text"]:focus {
-  box-shadow: none;
+  box-shadow: 0 1px #fff
 }

@@ -1,10 +1,4 @@
-use Rack::Static, 
-  :urls => ["/js", "/css"],
-  :root => "public"
-
-response = lambda do |env|
-  [200, {'Content-Type' => 'text/html', 'Cache-Control' => 'public, max-age=86400'},
-  File.open('public/index.html', File::RDONLY)]
-end
-
-run response
+require 'rack'
+use Rack::Deflater
+use Rack::Static, :urls => ["", "js/", "css/"], :root => "./public", :index => "index.html"
+run lambda {|e|}

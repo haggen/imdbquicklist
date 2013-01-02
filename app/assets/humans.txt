@@ -1,0 +1,17 @@
+/* TEAM */
+
+Developer: Arthur Corenzan <arthur@corenzan.com>
+Site: http://corenzan.com
+Twitter: @haggen
+Location: São Paulo, Brazil.
+
+/* THANKS */
+
+Name: Rafael Galdencio <rafael.galdencio@gmail.com>
+
+/* SITE */
+
+Last update: 2012/12/28
+Standards: HTML5, CSS3, ECMAScript
+Components: jQuery, Bootstrap
+Software: Terminal (OSX), Sublime Text 2

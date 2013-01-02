@@ -1,0 +1,33 @@
+{
+  "author": "Arthur <arthur@corenzan.com>",
+  "name": "imdbql",
+  "description": "IMDb quicklist",
+  "version": "1.0.0",
+  "homepage": "http://imdbql.herokuapp.com",
+  "repository": {
+  	"type": "git",
+  	"url": "https://github.com/haggen/imdbquicklist"
+  },
+
+  "engines": {
+  	"node": "~0.6.10 || 0.8 || 0.9"
+  },
+
+  "scripts": {
+  	"start": "brunch watch --server",
+  	"test": "brunch test"
+  },
+
+  "devDependencies": {
+  	"javascript-brunch": ">= 1.0 < 1.5",
+
+  	"css-brunch": ">= 1.0 < 1.5",
+
+  	"uglify-js-brunch": ">= 1.0 < 1.5",
+  	"clean-css-brunch": ">= 1.0 < 1.5"
+  },
+
+  "dependencies": {
+    "express": "~> 3.0.0"
+  }
+}
